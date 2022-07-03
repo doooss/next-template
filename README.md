@@ -1,4 +1,4 @@
-# 2022-07 Next js Template
+# 2022-07 Next js Template (with post-css)
 
 기존 템플릿에서 css-in-js 를 제외한 기본에 충실한 템플릿
 
@@ -7,6 +7,8 @@
 - [디렉토리](#디렉토리)
 
 - [코딩컨벤션](#코딩컨벤션)
+
+- [postcss-config](#Postcss)
 
 ---
 
@@ -113,3 +115,71 @@
 
 4. kebabCase
   - 컴포넌트를 제외한 네이밍은 kebabcase 를 이용한다.
+
+
+## Postcss
+
+이 템플릿의 목적은 config 최소화이기 때문에 기본 설정으로 맞추는 것을 지향하나, 
+
+코드의 일관성과 편의성, 나오는 결과물의 호환성을 높이기 위해 post-css는 사용하기로 마음먹었습니다.
+
+> postcsc.config.js
+
+```js
+module.exports = {
+  plugins: {
+    'postcss-flexbugs-fixes': {},
+    'postcss-nesting': {},
+    'postcss-custom-media': {
+      importFrom: [
+        () => {
+          const customMedia = {
+            '--device-mobile': '(min-width: 0) and (max-width: 640px)',
+            '--device-tablet': '(min-width: 641px) and (max-width: 1280px)',
+          };
+          return { customMedia };
+        },
+      ],
+    },
+    'postcss-preset-env': {
+      autoprefixer: {
+        flexbox: 'no-2009',
+      },
+      stage: 3,
+      features: {
+        'custom-properties': false,
+      },
+    },
+  },
+};
+```
+
+설정은 최소화 하였으나, customMedia 의 경우 본인이 사용할 코드를 해당 config 파일에 직접 추가할 것을 추천드립니다.
+
+해당 설정들로 사용예)
+
+> custom-media
+
+```ts
+  @media --device-mobile {
+    .grid_item {
+      grid-column: auto / span var(--mobile);
+    }
+  }
+
+  @media --device-tablet {
+    .grid_item {
+      grid-column: auto / span var(--tablet);
+    }
+  }
+```
+
+> postcss-nesting
+
+```css
+  .class_something{
+    & .nesting{
+      ~~
+    }
+  }
+```
