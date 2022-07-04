@@ -1,0 +1,13 @@
+.paper {
+    display: flex;
+    width: var(--width);
+    height: var(--height);
+    gap: var(--gap);
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    scroll-behavior: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

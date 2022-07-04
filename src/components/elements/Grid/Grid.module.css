@@ -1,34 +1,34 @@
 .grid_container {
-  --width: 100%;
-  --height: 100%;
-  --gap: 0;
+    --width: 100%;
+    --height: 100%;
+    --gap: 0;
 
-  display: grid;
-  width: var(--width, 100%);
-  grid-template-columns: repeat(12, 1fr);
-  grid-auto-rows: minmax(var(--height, 100%), auto);
-  gap: var(--gap, 0);
+    display: grid;
+    width: var(--width, 100%);
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(var(--height, 100%), auto);
+    gap: var(--gap, 0);
 }
 
 .grid_item {
-  --row: 1;
-  --width: 100%;
-  --height: 100%;
+    --row: 4;
+    --width: 100%;
+    --height: 100%;
 
-  grid-column: auto / span var(--row);
-  width: var(--width);
-  height: var(--height);
-  overflow: hidden;
+    grid-column: auto / span var(--row);
+    width: var(--width);
+    height: var(--height);
+    overflow: hidden;
 }
 
 @media --device-mobile {
-  .grid_item {
-    grid-column: auto / span var(--mobile);
-  }
+    .grid_item {
+        grid-column: auto / span var(--mobile);
+    }
 }
 
 @media --device-tablet {
-  .grid_item {
-    grid-column: auto / span var(--tablet);
-  }
+    .grid_item {
+        grid-column: auto / span var(--tablet);
+    }
 }
