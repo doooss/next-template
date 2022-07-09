@@ -9,7 +9,7 @@
     "build:out": "next build && next export"
   },
   "dependencies": {
-    "next": "12.2.0",
+    "next": "^12.2.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "usehooks-ts": "^2.6.0"
@@ -21,10 +21,10 @@
     "@types/react": "18.0.14",
     "@typescript-eslint/eslint-plugin": "^5.30.0",
     "@typescript-eslint/parser": "^5.30.0",
-    "eslint": "8.18.0",
-    "eslint-config-next": "12.2.0",
+    "eslint": "^8.19.0",
+    "eslint-config-next": "^12.2.2",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "jest": "^28.1.1",
     "jest-environment-jsdom": "^28.1.1",
