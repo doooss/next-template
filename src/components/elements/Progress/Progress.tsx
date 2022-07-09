@@ -2,7 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 
 import styles from './Progress.module.css';
 
-export const Progress = ({ color }: { color?: string }) => {
+export interface ProgressProps {
+    color?: string;
+}
+
+export const Progress = ({ color }: ProgressProps) => {
     const progressRef = useRef<HTMLDivElement>(null);
     const [state, setState] = useState(true);
 

@@ -6,15 +6,13 @@ import styles from './Loading.module.css';
     color -> 해당 돌아가는 원의 컬러 default #f3f3f3
 */
 
-const Loading = ({
-    color,
-    circleSize,
-    size,
-}: {
+export interface LoadingProps {
     color?: string;
     circleSize?: number;
     size?: number;
-}) => {
+}
+
+const Loading = ({ color, circleSize, size }: LoadingProps) => {
     return (
         <div
             className={styles.loading}
