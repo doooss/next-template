@@ -6941,6 +6941,7 @@ __metadata:
     jest: ^28.1.1
     jest-environment-jsdom: ^28.1.1
     next: ^12.2.2
+    postcss: ^8.4.14
     postcss-custom-media: ^8.0.2
     postcss-flexbugs-fixes: ^5.0.2
     postcss-nesting: ^10.1.10
