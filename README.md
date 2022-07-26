@@ -1,6 +1,8 @@
-# 2022-07 Next js Template (with post-css)
+# 2022-07 Next js Template (with post-css and yarn berry)
 
 기존 템플릿에서 css-in-js 를 제외한 기본에 충실한 템플릿
+
+> 해당 템플릿은 yarn 3.2.1 기준으로 제작되었습니다.
 
 - [라이브러리](#라이브러리)
 
@@ -11,6 +13,8 @@
 - [postcss-config](#Postcss)
 
 ---
+
+
 
 ## 사용 라이브러리
 

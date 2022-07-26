@@ -1,10 +1,5 @@
 {
   "name": "template",
-  "workspaces": {
-    "packages": [
-      "package/*"
-    ]
-  },
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -26,7 +21,6 @@
     "@types/react": "18.0.14",
     "@typescript-eslint/eslint-plugin": "^5.30.0",
     "@typescript-eslint/parser": "^5.30.0",
-    "core-js-pure": "^3.24.0",
     "eslint": "^8.19.0",
     "eslint-config-next": "^12.2.2",
     "eslint-config-prettier": "^8.5.0",
