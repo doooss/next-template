@@ -1,8 +1,8 @@
-# 2022-07 Next js Template
+# 2022-08 Next js Template
 
-next-js eslint, prettier,   
+next-js eslint, prettier, postcss, stylelint, jest, testing-library 가 적용된 기본 템플릿    
 
-
+- [로그](#변경로그(월별))
 
 - [라이브러리](#라이브러리)
 
@@ -12,12 +12,36 @@ next-js eslint, prettier,
 
 ---
 
-## 사용 라이브러리
+## 변경로그(월별)
+
+- 07
+
+emotion -> postcss
+
+> css-in-js의 성능이슈를 체험하고 postcss를 기본 템플릿으로 삼음
+
+- 08
+
+npm -> yarn -> npm
+
+> yarn berry zero install을 시도, 
+extension 호환성, 일부 lib 호환성 이슈를 체험하고 npm으로 회귀
+
+next v12.2 -> 12.1
+
+> 12.2의 미들웨어 변경으로 발생되는 성능 이슈를 발견하고 12.1로 다운그레이드
+
+
+
+
+
+
+## 라이브러리
 
 - core
 
 ```json
-    "next": "^12.2.2",
+    "next": "^12.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0"
 ```
